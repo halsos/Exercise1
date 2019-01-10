@@ -12,24 +12,38 @@ i = 0
 def incrementingFunction():
     global i
     # TODO: increment i 1_000_000 times
+    j = 0
+    while(j < 1000000):
+        j += 1
+        i += 1
+        #print("inc")
+        #print(i)
 
 def decrementingFunction():
     global i
+    k = 0
+    while(k < 1000000):
+        k += 1
+        i -= 1
+
     # TODO: decrement i 1_000_000 times
 
 
 
 def main():
     # TODO: Something is missing here (needed to print i)
+    global i
 
     incrementing = Thread(target = incrementingFunction, args = (),)
     decrementing = Thread(target = decrementingFunction, args = (),)
-    
+
     # TODO: Start both threads
-    
+    incrementing.start()
+    decrementing.start()
+
     incrementing.join()
     decrementing.join()
-    
+
     print("The magic number is %d" % (i))
 
 
