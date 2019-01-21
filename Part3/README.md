@@ -29,7 +29,7 @@ When answering the questions, remember to use all the resources at your disposal
  ### Which one of these do `pthread_create()` (C/POSIX), `threading.Thread()` (Python), `go` (Go) create?
  > `pthread_create()`: Thread
     `threading.Thread()`: Thread
-    `go`: Coroutine
+    `go`: Coroutine/Goroutine/Lightweight thread
  
  ### How does pythons Global Interpreter Lock (GIL) influence the way a python Thread behaves?
  > GIL uses mutex to lock the entire system to avoid unwanted access to memory. The negative effect of GIL is that only one thread can run at a time, making a multithreading process single threaded.
